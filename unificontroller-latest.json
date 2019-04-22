@@ -7,7 +7,7 @@
     "openjdk8",
     "unzip",
     "pcre",
-    "snappy"
+    "snappyjava"
   ],
   "packagesite": "http://pkg.cdn.trueos.org/iocage/unstable",
   "fingerprints": {
