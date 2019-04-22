@@ -1,6 +1,7 @@
 #!/bin/sh
 
-set VERSION=5.10.21
+# TODO: get automatically
+VERSION=5.10.21
 
 portsnap fetch
 portsnap extract
