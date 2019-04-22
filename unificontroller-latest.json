@@ -2,7 +2,13 @@
   "name": "unificontroller",
   "release": "11.2-RELEASE",
   "artifact": "https://github.com/mkuron/iocage-plugin-unificontroller-latest.git",
-  "pkgs": [],
+  "pkgs": [
+    "mongodb36",
+    "openjdk8",
+    "unzip",
+    "pcre",
+    "snappy"
+  ],
   "packagesite": "http://pkg.cdn.trueos.org/iocage/unstable",
   "fingerprints": {
 	  "iocage-plugins": [
