@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# TODO: get automatically
-VERSION=5.10.21
+VERSION=$(curl -s http://dl.ubnt.com/unifi/debian/dists/stable/ubiquiti/binary-amd64/Packages.gz | zcat | grep Version: | grep -Eo '[0-9\.]+' | head -n 1)
 
 portsnap fetch
 portsnap extract
@@ -13,3 +12,5 @@ make clean
 
 sysrc -f /etc/rc.conf unifi_enable="YES"
 service unifi start 2>/dev/null
+
+sysrc -f /etc/rc.conf cron_enable="NO"
