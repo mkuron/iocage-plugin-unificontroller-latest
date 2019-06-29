@@ -17,4 +17,6 @@
 
 # Update
 
-To do
+  iocage exec unificontroller pkg update
+  iocage exec unificontroller pkg upgrade
+  iocage exec unificontroller /root/post_upgrade.sh
