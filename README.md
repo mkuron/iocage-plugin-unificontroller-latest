@@ -20,5 +20,5 @@ iocage start unificontroller
 # Update
 
   iocage exec unificontroller pkg update
-  iocage exec unificontroller pkg upgrade
+  iocage exec unificontroller pkg upgrade --yes
   iocage exec unificontroller /root/post_upgrade.sh

@@ -11,7 +11,7 @@ fi
 pkg unlock -y unifi5
 service unifi stop
 
-portsnap fetch
+portsnap fetch | grep -v '^/usr/ports'
 portsnap extract
 cd /usr/ports/net-mgmt/unifi5/
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
