@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=$(curl -s http://dl.ubnt.com/unifi/debian/dists/stable/ubiquiti/binary-amd64/Packages.gz | zcat | grep Version: | grep -Eo '[0-9\.]+' | head -n 1)
+VERSION=$(curl -Ls http://www.ui.com/downloads/unifi/debian/dists/stable/ubiquiti/binary-amd64/Packages.gz | zcat | grep Version: | grep -Eo '[0-9\.]+' | head -n 1)
 
 portsnap fetch
 portsnap extract
