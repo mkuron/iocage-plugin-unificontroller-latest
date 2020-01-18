@@ -19,6 +19,17 @@ iocage start unificontroller
 
 # Update
 
-  iocage exec unificontroller pkg update
-  iocage exec unificontroller pkg upgrade --yes
-  iocage exec unificontroller /root/post_upgrade.sh
+```
+iocage exec unificontroller pkg update
+iocage exec unificontroller pkg upgrade --yes
+iocage exec unificontroller /root/post_upgrade.sh
+```
+
+# Remove
+
+All data is stored outside the jail, so configuration and database remain intact for later use.
+
+```
+iocage stop unificontroller
+iocage destroy unificontroller
+```
