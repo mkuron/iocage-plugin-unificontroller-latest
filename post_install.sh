@@ -1,5 +1,8 @@
 #!/bin/sh
 
+curl -Lo /root/post_upgrade.sh https://github.com/mkuron/iocage-plugin-unificontroller-latest/raw/master/post_upgrade.sh
+chmod +x /root/post_upgrade.sh
+
 VERSION=$(curl -Ls http://www.ui.com/downloads/unifi/debian/dists/stable/ubiquiti/binary-amd64/Packages.gz | zcat | grep Version: | grep -Eo '[0-9\.]+' | head -n 1)
 
 portsnap fetch
