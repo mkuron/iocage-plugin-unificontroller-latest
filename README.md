@@ -3,7 +3,7 @@
 ```
 git clone https://github.com/mkuron/iocage-plugin-unificontroller-latest.git unificontroller
 cd unificontroller
-iocage fetch -P -n unificontroller-latest.json ip4_addr="vnet0|192.168.200.21/24" bpf=yes vnet=on defaultrouter=192.168.200.1
+iocage fetch -P unificontroller-latest.json ip4_addr="vnet0|192.168.200.21/24" bpf=yes vnet=on defaultrouter=192.168.200.1
 iocage stop unificontroller
 for d in conf data dl logs run work; do
   mkdir -p /CUSTOM/unifi/$d

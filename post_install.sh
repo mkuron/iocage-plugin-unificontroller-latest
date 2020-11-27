@@ -7,8 +7,13 @@ VERSION=$(curl -Ls http://www.ui.com/downloads/unifi/debian/dists/stable/ubiquit
 
 portsnap fetch
 portsnap extract
-cd /usr/ports/net-mgmt/unifi5/
 export ALLOW_UNSUPPORTED_SYSTEM=1
+
+cd /usr/ports/ports-mgmt/pkg
+make deinstall
+make reinstall
+
+cd /usr/ports/net-mgmt/unifi5/
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
 make makesum
 make install
