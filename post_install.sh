@@ -8,6 +8,7 @@ VERSION=$(curl -Ls http://www.ui.com/downloads/unifi/debian/dists/stable/ubiquit
 portsnap fetch
 portsnap extract
 export ALLOW_UNSUPPORTED_SYSTEM=1
+sed -i '' 's/^.error.*do not agree on major.*//g' /usr/ports/Mk/bsd.port.mk
 
 cd /usr/ports/ports-mgmt/pkg
 make deinstall
