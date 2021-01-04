@@ -16,6 +16,7 @@ portsnap extract
 cd /usr/ports/net-mgmt/unifi5/
 export ALLOW_UNSUPPORTED_SYSTEM=1
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
+sed -i '' 's/^.error.*do not agree on major.*//g' /usr/ports/Mk/bsd.port.mk
 make makesum
 make deinstall
 make install
