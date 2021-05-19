@@ -1,6 +1,6 @@
 {
   "name": "unificontroller",
-  "release": "11.3-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/mkuron/iocage-plugin-unificontroller-latest.git",
   "pkgs": [
     "mongodb36",

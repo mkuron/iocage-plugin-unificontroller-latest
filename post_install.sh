@@ -14,13 +14,13 @@ cd /usr/ports/ports-mgmt/pkg
 make deinstall
 make reinstall
 
-cd /usr/ports/net-mgmt/unifi5/
+cd /usr/ports/net-mgmt/unifi6/
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
 make makesum
 make install
 make clean
 
-pkg lock -y unifi5
+pkg lock -y unifi6
 
 sysrc -f /etc/rc.conf unifi_enable="YES"
 sysrc -f /etc/rc.conf cron_enable="NO"
