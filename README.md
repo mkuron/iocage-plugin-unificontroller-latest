@@ -22,6 +22,18 @@ iocage exec unificontroller pkg upgrade --yes
 iocage exec unificontroller /root/post_upgrade.sh
 ```
 
+# Upgrade
+
+I recommend to stop and rename the old jail and then follow the install instructions at the begining of this file.
+
+```
+iocage stop unificontroller
+iocage rename unificontroller OLD-unificontroller
+cd unificontroller
+git pull origin master
+iocage fetch ...
+```
+
 # Remove
 
 All data is stored outside the jail, so configuration and database remain intact for later use.
