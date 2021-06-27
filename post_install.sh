@@ -16,7 +16,8 @@ make reinstall
 
 cd /usr/ports/net-mgmt/unifi6/
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
-make makesum
+rm -rf /usr/ports/distfiles/unifi*
+make makesum || exit 1
 make install
 make clean
 

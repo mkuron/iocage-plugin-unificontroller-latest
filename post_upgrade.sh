@@ -17,7 +17,8 @@ cd /usr/ports/net-mgmt/unifi6/
 export ALLOW_UNSUPPORTED_SYSTEM=1
 sed -i '' "s/^PORTVERSION=.*/PORTVERSION=$VERSION/g" Makefile
 sed -i '' 's/^.error.*do not agree on major.*//g' /usr/ports/Mk/bsd.port.mk
-make makesum
+rm -rf /usr/ports/distfiles/unifi*
+make makesum || exit 1
 make deinstall
 make install
 make clean
