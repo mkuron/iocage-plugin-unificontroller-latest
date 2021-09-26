@@ -3,6 +3,10 @@
 VERSION=$(curl -Ls http://www.ui.com/downloads/unifi/debian/dists/stable/ubiquiti/binary-amd64/Packages.gz | zcat | grep Version: | grep -Eo '[0-9\.]+' | head -n 1)
 OLDVERSION=$(grep -o 'PORTVERSION=.*' /usr/ports/net-mgmt/unifi6/Makefile | awk -F = '{print $2}')
 
+if [ "$VERSION" = "" ]; then
+        exit 1
+fi
+
 if [ "$VERSION" = "$OLDVERSION" ]; then
 	echo "Already up to date: $VERSION"
 	exit 0
